@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-// المكون المصمم الجديد مع خلفية متدرجة
+
 const StyledSection = styled(motion.section)`
   position: relative;
   overflow: hidden;
   padding: 8rem 2rem;
-  
+   border-radius: 1rem;
   background: linear-gradient(135deg, #f0f4f8 0%, #203d5eff 100%);
   color: #1a202c;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,7 +24,7 @@ const StyledSection = styled(motion.section)`
   }
 `;
 
-// حاوية المحتوى الرئيسية - تم تصحيحها هنا
+
 const ContentContainer = styled(motion.div)`
   max-width: 1200px;
   margin: 0 auto;
@@ -34,14 +34,14 @@ const ContentContainer = styled(motion.div)`
   text-align: center;
 `;
 
-// حاوية العنوان - تم تصحيحها هنا
+
 const HeaderContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-// الأنماط الخاصة بالعناوين والنصوص
+
 const StyledH1 = styled(motion.h1)`
   font-size: 3.5rem;
   font-weight: 700;
