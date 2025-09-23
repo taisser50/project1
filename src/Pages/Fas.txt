@@ -1,0 +1,667 @@
+  <div className="grid md:grid-cols-2 gap-6 items-center">
+        {/* الكارت مع الصورة */}
+        <motion.div
+          className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+        >
+          <img
+            src="src/images/ourwork/fireAlarm/f2.png"
+            alt="Fire Alarm"
+            className="w-full h-full object-cover"
+          />
+
+          {/* الغطاء يظهر عند hover */}
+          <motion.div
+            className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            
+            <div >
+             
+              <h2 className="text-sm">Up to 120 addresses on one loop.
+
+The loop supports class A and Class B types.
+
+An easy to read, 4.3"color screen LCD with a resolution of 480×272.
+
+Zone indicators for 16 zones gives a quick indication of the location of an alarm.
+
+Record capacity of 1000 historical events for each of historical fire, historical fault and historical operation.
+
+An independently programmable conventional sounder circuit output.
+
+Integral power supply and battery.
+
+Flexible and intuitive cause and effect programming on front panel.
+
+Zone test, point test and module start/stop testing facilitate the commissioning.
+
+U-disk interface makes the load and save of configuration or historical data convenient for system commissioning and maintenance.
+
+Hierarchy management with three access levels.
+
+Anti-tamper protection by a key lock.
+
+CAN bus for interconnection of up to 20 FACPs.</h2>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+          <h2 className="text-center font-bold text-blue-500 text-size-30px">Fire alarm control panel SEC1000</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}
+         
+        </div>
+      </div>
+
+      <div className="pt-[40px]"></div>
+       <div className="grid md:grid-cols-2 gap-6 items-center">
+        {/* الكارت مع الصورة */}
+        <motion.div
+          className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+        >
+          <img
+            src="src/images/ourwork/fireAlarm/f3.png"
+            alt="Fire Alarm"
+            className="w-full h-full object-cover"
+          />
+
+          {/* الغطاء يظهر عند hover */}
+          <motion.div
+            className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div>
+             
+              <p className="text-sm">
+              EN54-2&EN54-4 certified by LPCB and Applus.
+
+7.0 inch color touch-sensitive screen LCD, resolution of 800×480.
+
+324 addresses for 1 loop，max 8 loops.
+
+A maximum of 5000 fire protection zones are supported.More user-friendly Night Mode Time Range Settings.
+
+Networkable: CAN bus for interconnection of up to 60 FACPs and Ethernet for up to 254 FACPs.
+
+Fire alarm, fault, C&E and operation, each category can store up to 10000 records.
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+         <h2 className="text-center font-bold text-blue-500 text-size-30px">Fire alarm control panel SEC3008</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}
+         
+        </div>
+      </div>
+
+      <div className="pt-[40px]"></div>
+       <div className="grid md:grid-cols-2 gap-6 items-center">
+        {/* الكارت مع الصورة */}
+        <motion.div
+          className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+        >
+          <img
+            src="src/images/ourwork/fireAlarm/f5.png"
+            alt="Fire Alarm"
+            className="w-full h-full object-cover"
+          />
+
+          {/* الغطاء يظهر عند hover */}
+          <motion.div
+            className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div>
+             
+              <p className="text-sm">
+               EN54-2&EN54-4 certified by LPCB and Applus.
+
+7.0 inch color touch-sensitive screen LCD, resolution of 800×480.
+
+324 addresses for 1 loop，max 4 loops.
+
+A maximum of 5000 fire protection zones are supported.More user-friendly Night Mode Time Range Settings.
+
+Networkable: CAN bus for interconnection of up to 60 FACPs and Ethernet for up to 254 FACPs.
+
+Fire alarm, fault, C&E and operation, each category can store up to 10000 records
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+         <h2 className="text-center font-bold text-blue-500 text-size-30px">Fire alarm control panel SEC3004</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}
+         
+        </div>
+      </div>
+
+      <div className="pt-[40px]"></div>
+       <div className="grid md:grid-cols-2 gap-6 items-center">
+        {/* الكارت مع الصورة */}
+        <motion.div
+          className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+        >
+          <img
+            src="src/images/ourwork/fireAlarm/f6.png"
+            alt="Fire Alarm"
+            className="w-full h-full object-cover"
+          />
+
+          {/* الغطاء يظهر عند hover */}
+          <motion.div
+            className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div>
+             
+              <p className="text-sm">
+            LPCB & CPR approval
+
+It supports soft addressing and rewriting the address via coder in situ
+
+Within a single-chip microcomputer, it can process the sampling data in real-time, save the latest 144 historical data and realize a curve tracing for the field situation
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+         <h2 className="text-center font-bold text-blue-500 text-size-30px">Addressable Photoelectric Smoke Detector A9030T</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}
+         
+        </div>
+      </div>
+
+      <div className="pt-[40px]"></div>
+       <div className="grid md:grid-cols-2 gap-6 items-center">
+        {/* الكارت مع الصورة */}
+        <motion.div
+          className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+        >
+          <img
+            src="src/images/ourwork/fireAlarm/f7.png"
+            alt="Fire Alarm"
+            className="w-full h-full object-cover"
+          />
+
+          {/* الغطاء يظهر عند hover */}
+          <motion.div
+            className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div>
+             
+              <p className="text-sm">
+              LPCB and CPR approval
+
+It supports soft addressing and rewriting the address via coder in situ. 
+
+Within a single-chip microcomputer, it can collect real-time data and then process it to realize a curve tracing for the field situation.
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+         <h2 className="text-center font-bold text-blue-500 text-size-30px">Addressable Heat Fire Detector A9020T</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}
+         
+        </div>
+      </div>
+
+      <div className="pt-[40px]"></div>
+       <div className="grid md:grid-cols-2 gap-6 items-center">
+        {/* الكارت مع الصورة */}
+        <motion.div
+          className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+        >
+          <img
+            src="src/images/ourwork/fireAlarm/f8.png"
+            alt="Fire Alarm"
+            className="w-full h-full object-cover"
+          />
+
+          {/* الغطاء يظهر عند hover */}
+          <motion.div
+            className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div>
+             
+              <p className="text-sm">
+              The low profile design of the Optical/Heat Multisensor detector Detector is sleek and evolutionary, with a 360° LED indicator which illuminates red when in alarm. 
+
+Non-polarity, two-bus connection that ensures convenient installation and maintenance.
+
+It can realize electronic coding and rewrite the address via coder in site.
+
+Within a single-chip MCU, it can realize real-time data acquisition and processing, realize a curve tracing for the field situation.
+
+It has a temperature, humidity and dust accumulation drift compensation function and a sensor fault detection function (fault reporting to fire alarm control panel).
+
+A sophisticated dynamic algorithm, providing transient rejection and compensation for drift whilst maintaining accurate sensitivity. 
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+         <h2 className="text-center font-bold text-blue-500 text-size-30px">Addressable Optical Smoke and Heat Multisensor Detector A9036T</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}
+         
+        </div>
+      </div>
+
+      <div className="pt-[40px]"></div>
+       <div className="grid md:grid-cols-2 gap-6 items-center">
+        {/* الكارت مع الصورة */}
+        <motion.div
+          className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+        >
+          <img
+            src="src/images/ourwork/fireAlarm/f9.png"
+            alt="Fire Alarm"
+            className="w-full h-full object-cover"
+          />
+
+          {/* الغطاء يظهر عند hover */}
+          <motion.div
+            className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div>
+             
+              <p className="text-sm">
+               LPCB and CPR approval.
+
+Semi-flush or surface mount.
+
+Lever reusable (non-glass break).
+
+LED indicator.
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+         <h2 className="text-center font-bold text-blue-500 text-size-30px">Manual Call Point A9060T</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}
+         
+        </div>
+      </div>
+
+      <div className="pt-[40px]"></div>
+       <div className="grid md:grid-cols-2 gap-6 items-center">
+        {/* الكارت مع الصورة */}
+        <motion.div
+          className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+        >
+          <img
+            src="src/images/ourwork/fireAlarm/f10.png"
+            alt="Fire Alarm"
+            className="w-full h-full object-cover"
+          />
+
+          {/* الغطاء يظهر عند hover */}
+          <motion.div
+            className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div>
+             
+              <p className="text-sm">
+              Meet both EN54-3 and EN54-23.
+
+Designed with an upper cover and a lower cover and installed on an independent base, it can be installed,debugged and maintained conveniently.
+
+Suitable for wall and ceiling mount application.
+
+Providing 16 tones.
+
+Highly efficient LED technology and specially designed lens.
+
+Light output synchronization.
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+         <h2 className="text-center font-bold text-blue-500 text-size-30px">Addressable Sounder visual indicator A9091T</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}
+         
+        </div>
+      </div>
+<div className="pt-[40px]"></div>
+ <div className="items-center flex justify-center">
+       <GlassButton
+            text="Learn More"
+            size="lg"
+          onClick={() => window.open ("https://www.sanjiang-security.com/productdetail/conventional%20fire%20alarm%20controller.html")} // تنقل خارجي
+          /></div>
+     
+      <div className="pt-[40px]"></div> 
+
+
+
+ <h2 className="text-xl font-bold mb-2 text-size-50px text-center">Fire Alarm Conventional</h2>
+
+
+      <div className="pt-[40px]"></div>
+       <div className="grid md:grid-cols-2 gap-6 items-center">
+        {/* الكارت مع الصورة */}
+        <motion.div
+          className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+        >
+          <img
+            src="src/images/ourwork/fireAlarm/f11.png"
+            alt="Fire Alarm"
+            className="w-full h-full object-cover"
+          />
+
+          {/* الغطاء يظهر عند hover */}
+          <motion.div
+            className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div>
+             
+              <p className="text-sm">
+              EN54-2&EN54-4 certified by LPCB and Applus.
+
+7.0 inch color touch-sensitive screen LCD, resolution of 800×480.
+
+324 addresses for 1 loop，max 8 loops.
+
+A maximum of 5000 fire protection zones are supported.More user-friendly Night Mode Time Range Settings.
+
+Networkable: CAN bus for interconnection of up to 60 FACPs and Ethernet for up to 254 FACPs.
+
+Fire alarm, fault, C&E and operation, each category can store up to 10000 records.
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+         <h2 className="text-center font-bold text-blue-500 text-size-30px">Fire alarm control panel SEC3008</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}
+         
+        </div>
+      </div>
+
+<div className="pt-[40px]"></div>
+  <div className="grid md:grid-cols-2 gap-6 items-center">
+        {/* الكارت مع الصورة */}
+        <motion.div
+          className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+        >
+          <img
+            src="src/images/ourwork/fireAlarm/f12.png"
+            alt="Fire Alarm"
+            className="w-full h-full object-cover"
+          />
+
+          {/* الغطاء يظهر عند hover */}
+          <motion.div
+            className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div>
+             
+              <p className="text-sm">
+              Designed with an upper cover and a lower cover, it can be installed, debugged and maintained conveniently. 
+
+Real-time monitoring to accurately determine ambient temperature conditions in protected areas. 
+
+Non-addressable， non-polarity, two-bus connection that ensures convenient installation and maintenance.
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+         <h2 className="text-center font-bold text-blue-500 text-size-30px">Conventional heat detector C9021T</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}         
+        </div>
+      </div>
+
+<div className="pt-[40px]"></div>
+
+  <div className="grid md:grid-cols-2 gap-6 items-center">
+        {/* الكارت مع الصورة */}
+        <motion.div
+          className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+        >
+          <img
+            src="src/images/ourwork/fireAlarm/f13.png"
+            alt="Fire Alarm"
+            className="w-full h-full object-cover"
+          />
+
+          {/* الغطاء يظهر عند hover */}
+          <motion.div
+            className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div>
+             
+              <p className="text-sm">
+         Designed with an upper cover and a lower cover, it can be installed, debugged and maintained conveniently. Real-time monitoring to accurately determine ambient temperature conditions in protected areas. 
+
+Non-addressable， non-polarity, two-bus connection that ensures convenient installation and maintenance.
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+         <h2 className="text-center font-bold text-blue-500 text-size-30px">CONVENTIONAL SMOKE DETECTOR C902OT</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}
+         
+        </div>
+      </div>
+
+      <div className="pt-[40px]"></div>
+
+  <div className="grid md:grid-cols-2 gap-6 items-center">
+        {/* الكارت مع الصورة */}
+        <motion.div
+          className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+          whileHover={{ scale: 1.02 }}
+        >
+          <img
+            src="src/images/ourwork/fireAlarm/f14.png"
+            alt="Fire Alarm"
+            className="w-full h-full object-cover"
+          />
+
+          {/* الغطاء يظهر عند hover */}
+          <motion.div
+            className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <div>
+             
+              <p className="text-sm">
+               Designed with an upper cover and a lower cover, it can be installed, debugged and maintained conveniently. 
+
+Multiple can be used in parallel, and the terminal load must be connected at the end.
+
+The pressing sheet on the manual fire alarm call point will not get crushed after it is pressed, but can be reset by a special tool, so it can be used repeatedly.
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+         <h2 className="text-center font-bold text-blue-500 text-size-30px">Conventional manual call point C9060T</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}
+         
+        </div>
+      </div>
+      <div className="pt-[40px]"></div>
+
+  <div className="grid md:grid-cols-2 gap-6 items-center">
+      <motion.div
+  className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+  // الحركة الطافية (scale صغيرة ذهابًا وإيابًا)
+  animate={{ scale: [1, 1.03, 1] }}
+  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+  whileHover={{ scale: 1.03 }} // عند الهوفر توقف الحركة وتكبر قليلاً
+>
+  <img
+    src="src/images/ourwork/fireAlarm/f15.png"
+    alt="Fire Alarm"
+    className="w-full h-full object-cover"
+  />
+
+  {/* الغطاء يظهر عند hover */}
+  <motion.div
+    className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"
+    initial={{ opacity: 0, y: 30 }}
+    whileHover={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.3, ease: "easeOut" }}
+  >
+    <div>
+      <p className="text-sm">
+        Choice of up to tone modes. Adopting independent base, it is simple and
+        convenient for installation, commissioning and maintenance. The light
+        display adopts multiple ultra-high brightness LEDs, with eye-catching
+        display, long life and low power consumption. Tamper-evident function
+        is possible.
+      </p>
+    </div>
+  </motion.div>
+</motion.div>
+
+        {/* النصوص الجانبية + الزر */}
+        <div className="flex flex-col gap-4">
+         <h2 className="text-center font-bold text-blue-500 text-size-30px">Conventional Sounder Beacon C9092T</h2>
+          <p className="text-gray-600">
+            Our Fire Alarm solutions help protect your business with modern IT
+            monitoring systems.
+          </p>
+
+          {/* الزر ينقل لموقع معين */}
+         
+        </div>
+      </div>
+
+
+
+
+
+      ["#012a4a","#013a63","#01497c","#014f86","#2a6f97","#2c7da0","#468faf","#61a5c2","#89c2d9","#a9d6e5"]
