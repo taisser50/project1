@@ -14,7 +14,6 @@ import Login from "./Pages/Login";
 import HIK from "./Pages/HIK";
 import Footer from "./components/Footer";
 import Footer1 from "./components/Footer1";
-import isp from "./Pages/isp";
 import Isp from "./Pages/isp";
 
 

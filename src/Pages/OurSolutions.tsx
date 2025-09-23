@@ -224,7 +224,7 @@ function OurSolutions() {
        </TextSection>
 
        <TextSection title="IP PHONE" subtitle="   We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">     
-            <ProductCardProps imageSrc={"images/adtbarai/adtbarai1.png"} alt={""} title={"BARRIER"} description={"At ADT, our mission is to deliver innovative IT solutions that drive success for our clients. We are committed to providing exceptional service and cutting-edge technology to help businesses thrive., parking management"}></ProductCardProps>
+            <ProductCardProps imageSrc={"images"} alt={""} title={"E-Commerce Development"} description={"Launch your online shop with ADT. Our e-commerce solutions are designed to provide you with a robust platform that drives sales and improves customer engagement."}></ProductCardProps>
      </TextSection>
       </div>
 
