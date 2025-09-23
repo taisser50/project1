@@ -70,7 +70,7 @@ export default function ProductCard({ imageSrc, alt, title, description, textAre
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ amount: 0.3 }} // 👈 تتكرر مع كل scroll
       >
-        <h1 className="text-center md:text-left font-bold text-blue-500 text-2xl md:text-3xl">
+        <h1 className="text-center md:text-left font-bold text-black text-2xl md:text-3xl">
           {title}
         </h1>
         <p className="text-gray-600">
