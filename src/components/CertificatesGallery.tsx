@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import PageContainer from "./PageContainer";
 
 const images = [
-  "images/ourwork/fireAlarm/Certificates and licenses/cert.png",
+  "images/ourwork/fireAlarm/Certificates and licenses/cert.jpg",
   "images/ourwork/fireAlarm/Certificates and licenses/cert1.png",
   "images/ourwork/fireAlarm/Certificates and licenses/cert3.png",
   "images/ourwork/fireAlarm/Certificates and licenses/cert4.png",

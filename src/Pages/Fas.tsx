@@ -24,7 +24,7 @@ const clickableImages: MarqueeImage[] = [
     alt: "Portfolio Item 1",
     href: "1",
     target: "_blank"},
-    {src: "images/ourwork/ourrwork1/s.jpg",
+    {src: "puplic/images/ourwork/ourrwork1/s.jpg",
     alt: "Portfolio Item 1",
     href: "1",
     target: "_blank"},
