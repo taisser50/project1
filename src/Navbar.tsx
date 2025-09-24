@@ -6,7 +6,7 @@ import Logo from "./Logo";
 import ArrowRight from "./ArrowRight";
 import Dropdown from "./components/Dropdown";
 import { AuthContext } from "./Context/AuthContext";
-import { Label } from "./components/lightswind/label";
+
 
 // خصائص التحريك (variants)
 const navVariants = {
@@ -131,7 +131,7 @@ const Navbar = () => {
             { to: "/Jop", label: "Jobs" },
             { to: "/Fas", label: "Fire Alarm Sanjiang" },
             { to: "/OurSolutions", label: "Solutions" },
-            { to: "/isp", label: "ISP"}
+        
 
           ].map((link, index) => (
             <motion.div key={link.to} variants={itemVariants} custom={index}>

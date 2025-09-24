@@ -1,16 +1,9 @@
 import React from "react";
 import PageContainer from "../components/PageContainer";
 import { MarqueeImage, ThreeDMarquee } from "../components/ThreeDImageRing";
-import  { Carousel, CarouselContent, CarouselNext, CarouselPrevious } from "../components/CARuse"
-import { CarouselItem } from "../components/lightswind/carousel";
-import { Card, CardContent } from "../components/lightswind/card";
 import PDFViewer from "../components/PDFViewer";
 import TextSection from "../components/TextSection";
-import ProductCard from "../components/ProductCardProps";
 import ProductCardProps from "../components/ProductCardProps";
-
-
-
 
 
 const items = [

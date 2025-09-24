@@ -40,7 +40,7 @@ function App() {
         <Route path="/OurSolutions" element={<OurSolutions />} />
         <Route path="/login"  element={<Login />} />
         <Route path="/HIK"  element={<HIK />} />
-        <Route path="/isp"  element={<Isp />} />
+      
 
 
       </Routes>
