@@ -21,7 +21,7 @@ function CertificatesGallery() {
     <PageContainer>
       <h1 className="text-2xl font-bold mb-6">Certificates</h1>
 
-      {/* Grid الصور */}
+      
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {images.map((img, idx) => (
           <motion.img
@@ -35,7 +35,7 @@ function CertificatesGallery() {
         ))}
       </div>
 
-      {/* Modal للعرض المكبر */}
+    
       <AnimatePresence>
         {selectedImg && (
           <motion.div

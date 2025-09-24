@@ -14,32 +14,32 @@ function SoftwareADT() {
       <div className="pt-[30px]"></div>
       <div className="grid md:grid-cols-3 gap-6">
         <ProductCardsoft
-          image="images/ourwork/software/vip.png"
+          image="/images/ourwork/software/vip.png"
           title="System VIP Software"
           link="#vip-software"
         />
         <ProductCardsoft
-          image="images/ourwork/software/service.png"
+          image="/images/ourwork/software/service.png"
           title="Service Software"
           link="#service-software"
         />
         <ProductCardsoft
-          image="images/ourwork/software/sales.png"
+          image="/images/ourwork/software/sales.png"
           title="Sales Software"
           link="#sales-software"
         />
         <ProductCardsoft
-          image="images/ourwork/software/accounte.png"
+          image="/images/ourwork/software/accounte.png"
           title="Accounting Software"
           link="#accounting-software" 
         />
         <ProductCardsoft
-          image="images/ourwork/software/parking.png"
+          image="/images/ourwork/software/parking.png"
           title="Parking Software"
           link="#parking-software"
         />
         <ProductCardsoft
-          image=" images/ourwork/software/warehouse.png"
+          image=" /images/ourwork/software/warehouse.png"
           title="Warehouse Software"
           link="#warehouse-software"
         />
