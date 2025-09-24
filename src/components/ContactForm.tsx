@@ -191,7 +191,7 @@ export default function ContactUs() {
               rel="noopener"
               className="bg-green-500 p-3 rounded-full hover:scale-110 transition"
             >
-              <FaWhatsapp />
+             
             </a>
           </div>
         </div>
