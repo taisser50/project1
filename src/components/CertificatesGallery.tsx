@@ -3,15 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import PageContainer from "./PageContainer";
 
 const images = [
-  "public/images/ourwork/fireAlarm/Certificates and licenses/cert.jpg",
-  "public/images/ourwork/fireAlarm/Certificates and licenses/Cert1.png",
-  "public/images/ourwork/fireAlarm/Certificates and licenses/cert3.png",
-  "public/images/ourwork/fireAlarm/Certificates and licenses/cert4.png",
-  "public/images/ourwork/fireAlarm/Certificates and licenses/cert5.png",
-  "public/images/ourwork/fireAlarm/Certificates and licenses/cert6.png",
-  "public/images/ourwork/fireAlarm/Certificates and licenses/cert7.png",
-  "public/images/ourwork/fireAlarm/Certificates and licenses/cert8.png",
-  "public/images/ourwork/fireAlarm/Certificates and licenses/cert9.png",
+  "/images/ourwork/fireAlarm/Certificates and licenses/Cert.jpg",
+  "/images/ourwork/fireAlarm/Certificates and licenses/Cert1.png",
+  "/images/ourwork/fireAlarm/Certificates and licenses/Cert3.png",
+  "/images/ourwork/fireAlarm/Certificates and licenses/Cert4.png",
+  "/images/ourwork/fireAlarm/Certificates and licenses/Cert5.png",
+  "/images/ourwork/fireAlarm/Certificates and licenses/Cert6.png",
+  "/images/ourwork/fireAlarm/Certificates and licenses/Cert7.png",
+  "/images/ourwork/fireAlarm/Certificates and licenses/Cert8.png",
+  "/images/ourwork/fireAlarm/Certificates and licenses/Cert9.png",
 ];
 
 function CertificatesGallery() {
