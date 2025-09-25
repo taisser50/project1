@@ -104,10 +104,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
         {isLoading && !isError && <StatusMessage>Dowloading..</StatusMessage>}
         {isError && <ErrorMessage>somthing wronge try agine</ErrorMessage>}
         
-        {/*
-          نشرط عرض الـ FileViewer فقط إذا لم يكن هناك خطأ
-          لأن وجوده مع خطأ قد يسبب مشاكل
-        */}
+       
         {!isError && (
           <FileViewer
             fileType="pdf"

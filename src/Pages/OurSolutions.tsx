@@ -158,7 +158,7 @@ function OurSolutions() {
   return (
     <PageContainer>  
       <div className="text-center font-bold text-[#013a63] text-size-50px">
-      <h1 className="text-4xl font-bold text-center">Our Solutions</h1> 
+      <h1 className="text-4xl font-bold text-center text-black">Our Solutions</h1> 
       <p className="mt-4 text-lg text-center">
         We offer a wide range of solutions to meet your needs.
       </p>
@@ -166,22 +166,24 @@ function OurSolutions() {
       <TextSection  title="Advertising Design" subtitle="   We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">
            <ProductCardProps imageSrc={"images/advert.png"} alt={""} title={"Advertising Design"} description={""}></ProductCardProps>
       </TextSection>
+       <div className="p-[40px]"/>
     
      <div>
        <TextSection title="Emergency Power" subtitle="   We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">     
             <ProductCardProps imageSrc={"images/apanle.png"} alt={""} title={"Solar Panel"} description={"At ADT, our purpose is to empower businesses through technology. We strive to deliver innovative solutions that enhance productivity and drive growth."}></ProductCardProps>
        </TextSection>  
+       <div className="p-[40px]"/>
       
        <TextSection title="Emergency Power" subtitle="   We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">     
             <ProductCardProps imageSrc={"images/inv.png"} alt={""} title={"Inverter"} description={"We offer a full suite of IT services, including infrastructure support and data management. Our expertise helps businesses leverage technology effectively."}></ProductCardProps>    
        </TextSection>
+       <div className="p-[40px]"/>
 
        <TextSection title="Emergency Power" subtitle="   We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">     
             <ProductCardProps imageSrc={"images/ups.png"} alt={""} title={"UPS"} description={"Our team at ADT is composed of highly skilled professionals committed to excellence. We work collaboratively to deliver solutions that align with our clients' goals."}></ProductCardProps>
        </TextSection>
       </div>
-
-         <div className="p-[40px]"/>
+       <div className="p-[40px]"/>
       <TextSection
         title="Advertising Design"
         subtitle=""
@@ -197,31 +199,36 @@ function OurSolutions() {
      <TextSection title="PARKING MANAGMENT" subtitle="  We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">
                   <ProductCardProps imageSrc={"images/anpr.png"} alt={""} title={"ANPR"} description={"ADT has been serving the IT community for over a decade, helping businesses achieve their goals through technology. Our journey is marked by innovation and growth. parking management"}></ProductCardProps>
         </TextSection>  
+       <div className="p-[40px]"/>
       
        <TextSection title="PARKING MANAGMENT" subtitle="   We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">     
           <ProductCardProps imageSrc={"images/gate.png"} alt={""} title={"Electric Door Gate"} description={"At ADT, our mission is to deliver innovative IT solutions that drive success for our clients. We are committed to providing exceptional service and cutting-edge technology to help businesses thrive."}></ProductCardProps>
        </TextSection>
+       <div className="p-[40px]"/>
 
        <TextSection title="PARKING MANAGMENT" subtitle="   We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">     
             <ProductCardProps imageSrc={"images/adtbarai/adtbarai1.png"} alt={""} title={"BARRIER"} description={"At ADT, our mission is to deliver innovative IT solutions that drive success for our clients. We are committed to providing exceptional service and cutting-edge technology to help businesses thrive., parking management"}></ProductCardProps>
      </TextSection>
       </div>
+       <div className="p-[40px]"/>
 
         <div>
      <TextSection title="IP PHONE" subtitle="  We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">
                   <ProductCardProps imageSrc={"images/viop.png"} alt={""} title={"VOIP"} description={"At ADT, we specialize in providing innovative IT solutions tailored to your business needs. Our team is dedicated to harnessing technology to drive efficiency and growth."}></ProductCardProps>
         </TextSection>  
+       <div className="p-[40px]"/>
       
        <TextSection title="IP PHONE" subtitle="   We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">     
           <ProductCardProps imageSrc={"images/call.png"} alt={""} title={"CALL CENTER"} description={"At ADT, we believe in a client-centric approach that prioritizes your goals. Our solutions are designed to fit seamlessly into your existing processes, enhancing productivity and satisfaction."}></ProductCardProps>
        </TextSection>
+       <div className="p-[40px]"/>
 
        <TextSection title="IP PHONE" subtitle="   We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">     
             <ProductCardProps imageSrc={"images"} alt={""} title={"E-Commerce Development"} description={"Launch your online shop with ADT. Our e-commerce solutions are designed to provide you with a robust platform that drives sales and improves customer engagement."}></ProductCardProps>
      </TextSection>
       </div>
-
        <div className="p-[40px]"/>
+
      <TextSection title="Creative Website Design Solutions for Your Business" subtitle="">  
      <ul>
         <li className="text-30px">Visually stunning designs that capture attention.</li>
@@ -232,9 +239,7 @@ function OurSolutions() {
        <ProductCardProps imageSrc={"images/webd.png"} alt={""} title={"Web Design"} description={""}></ProductCardProps>
      </TextSection>
      <div className="p-[30px]">
-
-
-
+     <div className="grid md:grid-cols-2 gap-6">
      <PDFViewer 
         pdfUrl="/nice.pdf" 
         title="ELECTRIC GATE SOLUTION" 
@@ -252,7 +257,8 @@ function OurSolutions() {
         pdfUrl="/Smart-Parking.pdf" 
         title="PARKING SOLUTIONS" 
       />
-    </div>
+      </div>
+      </div>
       <div className="pt-[30px]"></div>
    
       <div className="pt-[30px]"></div> 

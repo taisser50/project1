@@ -7,7 +7,7 @@ function BoatVideo() {
       loop
     >
 
-      <source src="/adtTest.mp4" type="video/mp4" />
+      <source src="/adt.mp4" type="video/mp4" />
 
     </video>
   );

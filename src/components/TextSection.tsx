@@ -7,9 +7,14 @@ const StyledSection = styled(motion.section)`
   position: relative;
   overflow: hidden;
   padding: 8rem 2rem;
-   border-radius: 1rem;
-  background: linear-gradient(135deg, #f0f4f8 0%, #203d5eff 100%);
+  border-radius: 1rem;
+
+  background: rgba(255, 255, 255, 0.1); 
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   color: #1a202c;
+  
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   &::before {
