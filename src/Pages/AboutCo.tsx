@@ -1,18 +1,19 @@
 import React from 'react';
 import PageContainer from '../components/PageContainer';
 import TextSection from '../components/TextSection'; // تأكد من المسار الصحيح
+import Logo from '../Logo';
+import Compass from '../Compass';
 
 const AboutCo = () => {
   return (
-    <PageContainer>
+    <PageContainer> 
+       
       <TextSection
         title="About Our Company"
         subtitle="Innovative IT Solutions"
-      >
-        {/*
-          تم استبدال <StyledP> بعلامة <p> العادية
-          لأن StyledP غير موجودة في هذا الملف
-        */}
+      > 
+      <div className="flex items-center justify-center gap-2 flex-wrap"> <Compass /></div>
+         
         <p className="text-center text-[#013a63] mt-4 text-xl leading-relaxed px-4 md:px-24">
           At ADT Company, we specialize in delivering innovative IT solutions tailored to meet your business needs. Our expertise in software development and cloud services ensures that your organization stays ahead in the digital landscape.
         </p>

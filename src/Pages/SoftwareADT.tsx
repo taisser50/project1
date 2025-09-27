@@ -70,7 +70,7 @@ function SoftwareADT() {
       <div id="parking-software" className="my-10 p-6 bg-gray-100 rounded-lg text-center">
         <h2 className="text-2xl font-bold text-gray-800">Parking Software Details</h2>
         <p className="mt-2 text-gray-700">Detailed information about the Parking software...</p>
-        <ProductCard imageSrc={"images/parking dahua.png"} alt={"System Parking Software"} title={"ANPR DAHUA"} description={"The parking program is available for download as a demo, please purchase a license after 72 hours."} textArea={"v 5.6.1"}
+        <ProductCard imageSrc={"/images/parkingdahua.PNG"} alt={"System Parking Software"} title={"ANPR DAHUA"} description={"The parking program is available for download as a demo, please purchase a license after 72 hours."} textArea={"v 5.6.1"}
               /><div className="pt-[20px]"/>
               <GlassButton  text="Download Software DAHUA"
             size="lg"
@@ -101,7 +101,7 @@ function SoftwareADT() {
       <div className="pt-[30px]"/>
        
         <div className="pt-[30px]"/>
-        <ProductCard imageSrc={"images/PARKING HIKVISION.png"} alt={"System Parking Software"} title={"ANPR HIKVISION"} description={"The parking program is available for download as a demo, please purchase a license after 72 hours."} textArea={"v 4.4.1"}/>
+        <ProductCard imageSrc={"/images/PARKINGHIKVISION.PNG"} alt={"System Parking Software"} title={"ANPR HIKVISION"} description={"The parking program is available for download as a demo, please purchase a license after 72 hours."} textArea={"v 4.4.1"}/>
         <div className="pt-[20px]"/>
         <GlassButton  text="Download Software HIKVISION"
             size="lg"

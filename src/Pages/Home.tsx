@@ -6,11 +6,9 @@ import Isp from "../Pages/isp";
 function Home() {
   return (
     <>
-      <HeroText />
+      <HeroText /> 
      
-      <MapImages />
-
-      <BoatVideo />    
+      <BoatVideo />   
     </>
   );
 }

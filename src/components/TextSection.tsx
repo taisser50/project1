@@ -2,11 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-
 const StyledSection = styled(motion.section)`
   position: relative;
   overflow: hidden;
-  padding: 8rem 2rem;
+  padding: clamp(3rem, 8vw, 8rem) 2rem; /* padding متجاوب */
   border-radius: 1rem;
 
   background: rgba(255, 255, 255, 0.1); 
@@ -14,7 +13,7 @@ const StyledSection = styled(motion.section)`
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   color: #1a202c;
-  
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   &::before {
@@ -29,50 +28,52 @@ const StyledSection = styled(motion.section)`
   }
 `;
 
-
 const ContentContainer = styled(motion.div)`
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: clamp(1rem, 2vw, 2rem);
   text-align: center;
+  padding: 0 1rem;
 `;
-
 
 const HeaderContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 `;
 
-
 const StyledH1 = styled(motion.h1)`
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem); 
   font-weight: 700;
-  color: #000000ff;
+  color: #000;
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 10;
+   font-family: 'IBM Plex Sans', 'monospace'
 `;
 
 const StyledH2 = styled(motion.h2)`
-  font-size: 2.25rem;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
   font-weight: 600;
   color: #013a63;
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 10;
+   font-family:'IBM Plex Sans', 'sans-serif';
+
 `;
 
 const StyledP = styled(motion.p)`
-  font-size: 1.15rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.15rem);
   line-height: 1.8;
   color: #4a5568;
-  max-width: 900px;
+  max-width: 90%; 
   margin: 0 auto;
   position: relative;
   z-index: 10;
+    font-family: 'Inter', 'sans-serif';
 `;
 
 const textVariants = {
@@ -98,7 +99,7 @@ const staggerVariants = {
 interface TextSectionProps {
   title: string;
   subtitle: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const TextSection: React.FC<TextSectionProps> = ({ title, subtitle, children }) => {
@@ -106,21 +107,17 @@ const TextSection: React.FC<TextSectionProps> = ({ title, subtitle, children }) 
     <StyledSection
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.4 }}
+      viewport={{  amount: window.innerWidth < 768 ? 0.1 : 0.2 }}
     >
-      <ContentContainer
-        variants={staggerVariants}
-      >
+      <ContentContainer variants={staggerVariants}>
         <HeaderContainer>
-          <StyledH1 variants={textVariants}>
-            {title}
-          </StyledH1>
-          <StyledH2 variants={textVariants}>
-            {subtitle}
-          </StyledH2>
+          <StyledH1 variants={textVariants}>{title}</StyledH1>
+          <StyledH2 variants={textVariants}>{subtitle}</StyledH2>
         </HeaderContainer>
 
-        {children}
+        {children && React.Children.map(children, (child) =>
+          <StyledP variants={textVariants}>{child}</StyledP>
+        )}
       </ContentContainer>
     </StyledSection>
   );

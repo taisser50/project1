@@ -3,39 +3,46 @@ import FileViewer from 'react-file-viewer';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-// حاويات التصميم
 const ViewerContainer = styled(motion.div)`
-  max-width: 500px;
+  width: 95%;
+  max-width: 800px; /* أقصى عرض للشاشات الكبيرة */
   margin: 2rem auto;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const PDFHeader = styled.div`
   background-color: #013a63;
   color: #fff;
-  padding: 1.5rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
   text-align: center;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 700;
 `;
 
 const FileWrapper = styled.div`
   position: relative;
-  height: 700px;
+  height: clamp(400px, 60vh, 700px); /* ارتفاع متغير حسب حجم الشاشة */
   background-color: #f0f4f8;
+
+  @media (max-width: 480px) {
+    height: 50vh; /* شاشات صغيرة */
+  }
 `;
 
-// مكونات حالات التحميل والخطأ
 const StatusMessage = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #555;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   z-index: 10;
   text-align: center;
 `;
@@ -48,19 +55,18 @@ const ErrorMessage = styled(StatusMessage)`
   border-radius: 10px;
 `;
 
-// شريط التحكم
 const ControlsContainer = styled(motion.div)`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 1.5rem;
+  padding: clamp(0.8rem, 1.5vw, 1.5rem);
   background-color: #e2e8f0;
   border-top: 1px solid #d1d5db;
 `;
 
 const ControlButton = styled(motion.a)`
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  padding: clamp(0.5rem, 1vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 600;
   color: #fff;
   background-color: #013a63;
@@ -69,7 +75,7 @@ const ControlButton = styled(motion.a)`
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  
+
   &:hover {
     background-color: #005f9c;
   }
@@ -85,9 +91,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000); 
+    const timer = setTimeout(() => setIsLoading(false), 2000);
     return () => clearTimeout(timer);
   }, [pdfUrl]);
 
@@ -97,14 +101,17 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
   };
 
   return (
-    <ViewerContainer initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+    <ViewerContainer
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <PDFHeader>{title}</PDFHeader>
-      
+
       <FileWrapper>
-        {isLoading && !isError && <StatusMessage>Dowloading..</StatusMessage>}
-        {isError && <ErrorMessage>somthing wronge try agine</ErrorMessage>}
-        
-       
+        {isLoading && !isError && <StatusMessage>Downloading..</StatusMessage>}
+        {isError && <ErrorMessage>Something went wrong. Try again.</ErrorMessage>}
+
         {!isError && (
           <FileViewer
             fileType="pdf"
@@ -113,15 +120,19 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
           />
         )}
       </FileWrapper>
-      
-      <ControlsContainer initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+
+      <ControlsContainer
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
         <ControlButton
           href={pdfUrl}
           download
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-         Downlaod
+          Download
         </ControlButton>
       </ControlsContainer>
     </ViewerContainer>

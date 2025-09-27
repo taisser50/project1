@@ -7,7 +7,7 @@ function Isp() {
     return(
       <PageContainer>             
             <TextSection  title="Internet Service Provider" subtitle="Our company offers top-tier Internet Service Provider (ISP) solutions in partnership with a range of leading and trusted ISPs. By collaborating with multiple distinguished providers, we ensure that our clients receive:">
-      <ul>
+      <ul className="font-healing text-bold">
         <li className="text-30px">Reliable and high-speed internet connections tailored to their needs.</li>
         <li className="text-30px">Seamless connectivity through advanced technologies including Fiber-to-the-Home (FTTH).</li>
         <li className="text-30px">Flexible options from multiple providers, allowing for the best performance and coverage in every area.</li>

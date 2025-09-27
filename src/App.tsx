@@ -12,9 +12,9 @@ import SoftwareADT from "./Pages/SoftwareADT";
 import OurSolutions from "./Pages/OurSolutions";
 import Login from "./Pages/Login";
 import HIK from "./Pages/HIK";
-import Footer from "./components/Footer";
+
 import Footer1 from "./components/Footer1";
-import Isp from "./Pages/isp";
+
 
 
 

@@ -1,100 +1,128 @@
-
-
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
+import React, { useState, useEffect } from "react";
 
 export interface MarqueeImage {
   src: string;
   alt: string;
-  href?: string;
-  target?: "_blank" | "_self" | "_parent" | "_top";
 }
 
 export interface ThreeDMarqueeProps {
   images: MarqueeImage[];
   className?: string;
-  cols?: number; // default is 4
-  onImageClick?: (image: MarqueeImage, index: number) => void;
+  cols?: number;
+  baseRotateX?: number;
+  baseRotateY?: number;
+  baseRotateZ?: number;
 }
 
 export const ThreeDMarquee: React.FC<ThreeDMarqueeProps> = ({
   images,
   className = "",
   cols = 4,
-  onImageClick,
+  baseRotateX = 55,
+  baseRotateY = 0,
+  baseRotateZ = 45,
 }) => {
-  // Clone the image list twice
   const duplicatedImages = [...images, ...images];
-
   const groupSize = Math.ceil(duplicatedImages.length / cols);
   const imageGroups = Array.from({ length: cols }, (_, index) =>
     duplicatedImages.slice(index * groupSize, (index + 1) * groupSize)
   );
 
-  const handleImageClick = (image: MarqueeImage, globalIndex: number) => {
-    if (onImageClick) {
-      onImageClick(image, globalIndex);
-    } else if (image.href) {
-      window.open(image.href, image.target || "_self");
-    }
+  const [modalImage, setModalImage] = useState<MarqueeImage | null>(null);
+  const [rotation, setRotation] = useState({ rotateX: baseRotateX, rotateY: baseRotateY });
+
+  // Hover effect dynamic rotation
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const { innerWidth, innerHeight } = window;
+    const x = (e.clientX / innerWidth - 0.5) * 20; // -10 to +10 deg
+    const y = -(e.clientY / innerHeight - 0.5) * 20; // -10 to +10 deg
+    setRotation({ rotateX: baseRotateX + y, rotateY: baseRotateY + x });
+  };
+
+  // Reset rotation when mouse leaves
+  const handleMouseLeave = () => {
+    setRotation({ rotateX: baseRotateX, rotateY: baseRotateY });
   };
 
   return (
     <section
-      className={`mx-auto block h-[600px] max-sm:h-[400px] 
-        overflow-hidden rounded-2xl bg-gradient-to-r from-[#f0f4f8] to-[#203d5eff] dark:bg-black border-1 ${className}`}
+      className={`mx-auto block h-[600px] max-sm:h-[400px] overflow-hidden rounded-2xl 
+        bg-gradient-to-r from-[#f0f4f8] to-[#203d5eff] dark:bg-black border-1 ${className}`}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{ perspective: 1500 }}
     >
       <div
         className="flex w-full h-full items-center justify-center"
         style={{
-          transform: "rotateX(55deg) rotateY(0deg) rotateZ(45deg)",
+          transform: `rotateX(${rotation.rotateX}deg) rotateY(${rotation.rotateY}deg) rotateZ(${baseRotateZ}deg)`,
         }}
       >
         <div className="w-full overflow-hidden scale-90 sm:scale-100">
           <div
             className={`relative grid h-full w-full origin-center 
-              grid-cols-4 sm:grid-cols-${cols} gap-4 transform 
-              `}
+              grid-cols-2 sm:grid-cols-${Math.min(cols, 3)} md:grid-cols-${cols} gap-4 transform`}
           >
-            {imageGroups.map((imagesInGroup, idx) => (
-              <motion.div
-                key={`column-${idx}`}
-                animate={{ y: idx % 2 === 0 ? 100 : -100 }}
-                transition={{
-                  duration: idx % 2 === 0 ? 10 : 15,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-                className="flex flex-col items-center gap-6 relative"
-              >
-                <div className="absolute left-0 top-0 h-full w-0.5 bg-gray-200 dark:bg-gray-700" />
-                {imagesInGroup.map((image, imgIdx) => {
-                  const globalIndex = idx * groupSize + imgIdx;
-                  const isClickable = image.href || onImageClick;
+            {imageGroups.map((imagesInGroup, idx) => {
+              // Generate random speed for each column
+              const speed = 8 + Math.random() * 8;
 
-                  return (
+              return (
+                <motion.div
+                  key={`column-${idx}`}
+                  animate={{ y: idx % 2 === 0 ? 120 : -120 }}
+                  transition={{
+                    duration: speed,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "easeInOut",
+                  }}
+                  className="flex flex-col items-center gap-6 relative"
+                >
+                  {imagesInGroup.map((image, imgIdx) => (
                     <div key={`img-${imgIdx}`} className="relative">
-                      <div className="absolute top-0 left-0 w-full h-0.5 bg-gray-200 dark:bg-gray-700" />
                       <motion.img
-                        whileHover={{ y: -10 }}
+                        whileHover={{ y: -10, scale: 1.05, rotateX: 5, rotateY: 5 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         src={image.src}
                         alt={image.alt}
-                        width={970}
-                        height={700}
-                        className={`aspect-[970/700] w-full max-w-[200px] rounded-lg object-cover ring ring-gray-300/30 dark:ring-gray-800/50 shadow-xl hover:shadow-2xl transition-shadow duration-300 ${
-                          isClickable ? "cursor-pointer" : ""
-                        }`}
-                        onClick={() => handleImageClick(image, globalIndex)}
+                        className="aspect-[970/700] w-full max-w-[200px] rounded-lg object-cover
+                          ring ring-gray-300/20 dark:ring-gray-800/30 shadow-lg hover:shadow-2xl transition-all duration-300
+                          cursor-pointer"
+                        onClick={() => setModalImage(image)}
                       />
                     </div>
-                  );
-                })}
-              </motion.div>
-            ))}
+                  ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {modalImage && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setModalImage(null)}
+          >
+            <motion.img
+              src={modalImage.src}
+              alt={modalImage.alt}
+              className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl"
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
