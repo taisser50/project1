@@ -165,7 +165,7 @@ function Fas() {
     <PageContainer>
       
       <div className="pt-[10px]"></div>
-   
+       <img src="/logosnaj.png"/>
       <h5 className="text-center font-bold text-blue-500 text-size-50px">SANJIANG</h5>
        <h2 className="text-xl font-bold mb-2 text-size-50px text-center">Fire Alarm System</h2>
        <div className="pt-[20px]"></div>
