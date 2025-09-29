@@ -1,7 +1,7 @@
 import React from "react";
 import PageContainer from "../components/PageContainer";
 import { MarqueeImage, ThreeDMarquee } from "../components/ThreeDImageRing";
-import PDFViewer from "../components/PDFViewer";
+import PDFViewer1 from "../components/PDFViewer1";
 import TextSection from "../components/TextSection";
 import ProductCardProps from "../components/ProductCardProps";
 import GlassButton from "../components/GlassButton";
@@ -219,32 +219,39 @@ function OurSolutions() {
         <li className="text-30px">Visually stunning designs that capture attention.</li>
         <li className="text-30px">Seamless user experiences for easy navigation and engagement.</li><li className="text-30px">Professional and trustworthy layouts optimized across all devices.</li>
      </ul>
-      <p className="text-center text-[#013a63] mt-4 text-xl leading-relaxed px-4 md:px-24"> Let us bring your vision to life with unique design concepts tailored to impress your audience and elevate your brand.
-                     We’re excited to share our creative solutions with you! </p>
+      <div className="text-center text-[#013a63] mt-4 text-xl leading-relaxed px-4 md:px-24"> Let us bring your vision to life with unique design concepts tailored to impress your audience and elevate your brand.
+                     We’re excited to share our creative solutions with you! </div>
        <ProductCardProps imageSrc={"images/webd.png"} alt={""} title={"Web Design"} description={""}></ProductCardProps>
      </TextSection>
      </div>
-     <div className="p-[30px]">
-     <div className="grid md:grid-cols-2 gap-6" id="PDF">
-     <PDFViewer 
-        pdfUrl="/nice.pdf" 
-        title="ELECTRIC GATE SOLUTION" 
-      />
+    <div className="p-[30px]">
+  <div className="grid md:grid-cols-2 gap-6" id="PDF">
+    {/* نستخدم الخاصية key بناءً على مسار الملف لأنه فريد */}
+    <PDFViewer1 
+      key="/nice.pdf" 
+      pdfUrl="/nice.pdf" 
+      title="ELECTRIC GATE SOLUTION" 
+    />
 
-     <PDFViewer 
-        pdfUrl="/hikSolution.pdf" 
-        title="Hikvision solution" 
-      />
-     <PDFViewer 
-        pdfUrl="/Smart-Apartment.pdf" 
-        title="APARTMENT SOLUTION" 
-      />
-      <PDFViewer 
-        pdfUrl="/Smart-Parking.pdf" 
-        title="PARKING SOLUTIONS" 
-      />
-      </div>
-      </div>
+    <PDFViewer1 
+      key="/hikSolution.pdf" 
+      pdfUrl="/hikSolution.pdf" 
+      title="Hikvision solution" 
+    />
+    
+    <PDFViewer1 
+      key="/Smart-Apartment.pdf" 
+      pdfUrl="/Smart-Apartment.pdf" 
+      title="APARTMENT SOLUTION" 
+    />
+    
+    <PDFViewer1 
+      key="/Smart-Parking.pdf" 
+      pdfUrl="/Smart-Parking.pdf" 
+      title="PARKING SOLUTIONS" 
+    />
+  </div>
+</div>
       <div className="pt-[30px]"></div>
 
       <div className="pt-[30px]"></div>

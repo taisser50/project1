@@ -132,11 +132,11 @@ useEffect(() => {
           ))}
           {/* Desktop Dropdown More (يمكنك وضع Dropdown عادي هنا) */}
           <motion.div variants={itemVariants}>
-            <div className="relative group">
-              <button className="font-body cursor-pointer text-gray-700 font-medium hover:text-blue-600">
+            <div className="relative group p-4">
+              <button className="font-body  cursor-pointer text-gray-700 font-medium hover:text-blue-600">
                 More
               </button>
-              <div className="absolute hidden group-hover:block bg-white shadow rounded mt-2 right-0 w-48">
+              <div className="absolute hidden group-hover:block transition-all duration-500 group-hover:delay-500 bg-white  shadow-lg rounded mt-2 right-0 w-48">
                 {moreItems.map((item, index) => (
                   <Link
                     key={index}

@@ -8,6 +8,7 @@ function Isp() {
       <PageContainer>   
                
             <TextSection  title="Internet Service Provider" subtitle="Our company offers top-tier Internet Service Provider (ISP) solutions in partnership with a range of leading and trusted ISPs. By collaborating with multiple distinguished providers, we ensure that our clients receive:">
+     
       <ul className="text-sm sm:text-base md:text-lg leading-relaxed mb-4">
         <li className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 text-[#013a63]">Reliable and high-speed internet connections tailored to their needs.</li>
         <li className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 text-[#013a63]">Seamless connectivity through advanced technologies including Fiber-to-the-Home (FTTH).</li>

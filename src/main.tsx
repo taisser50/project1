@@ -5,6 +5,9 @@ import 'virtual:windi.css'
 import './index.css'
 import { AuthProvider } from './Context/AuthContext'
 
+import '/node_modules/react-pdf/dist/Page/AnnotationLayer.css'; 
+import 'react-pdf/dist/Page/TextLayer.css'; 
+
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

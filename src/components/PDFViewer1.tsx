@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import FileViewer from 'react-file-viewer';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { Document, Page, pdfjs } from 'react-pdf';
 
+// **الإعداد الأساسي لـ pdf.js worker:**
+// هذا ضروري ليعمل العرض بشكل صحيح
+pdfjs.GlobalWorkerOptions.workerSrc = `/workers/pdf.worker.min.js`;
 
+// -------------------------------------------------------------------
+// Styled Components
+// -------------------------------------------------------------------
 
 const ViewerContainer = styled(motion.div)`
   width: 95%;
-  max-width: 800px; /* أقصى عرض للشاشات الكبيرة */
+  max-width: 800px;
   margin: 2rem auto;
   border-radius: 15px;
   overflow: hidden;
@@ -30,11 +36,14 @@ const PDFHeader = styled.div`
 
 const FileWrapper = styled.div`
   position: relative;
-  height: clamp(400px, 60vh, 700px); /* ارتفاع متغير حسب حجم الشاشة */
+  /* جعل ارتفاع الملف مناسباً للعرض مع شريط تمرير داخلي */
+  height: clamp(400px, 60vh, 700px); 
   background-color: #f0f4f8;
+  /* هذا مهم جداً: لتمكين تمرير محتوى المستند */
+  overflow-y: auto; 
 
   @media (max-width: 480px) {
-    height: 50vh; /* شاشات صغيرة */
+    height: 50vh;
   }
 `;
 
@@ -83,24 +92,31 @@ const ControlButton = styled(motion.a)`
   }
 `;
 
+// -------------------------------------------------------------------
+// Component Interface and Implementation
+// -------------------------------------------------------------------
+
 interface PDFViewerProps {
   pdfUrl: string;
   title: string;
 }
 
-const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
-  const [isLoading, setIsLoading] = useState(true);
+const PDFViewer1: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
   const [isError, setIsError] = useState(false);
+  const [numPages, setNumPages] = useState<number | null>(null);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2000);
-    return () => clearTimeout(timer);
-  }, [pdfUrl]);
+  // تم إزالة isLoading و setTimeout
+  // سنعتمد على onLoadSuccess و onLoadError من <Document>
 
-  const handleError = () => {
+  const handleError = (error: any) => {
+    console.error("PDF Loading Error:", error);
     setIsError(true);
-    setIsLoading(false);
   };
+
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
+    setNumPages(numPages);
+    setIsError(false); // مسح أي خطأ سابق
+  }
 
   return (
     <ViewerContainer
@@ -111,15 +127,28 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
       <PDFHeader>{title}</PDFHeader>
 
       <FileWrapper>
-        {isLoading && !isError && <StatusMessage>Downloading..</StatusMessage>}
-        {isError && <ErrorMessage>Something went wrong. Try again.</ErrorMessage>}
+        {isError && <ErrorMessage>Something went wrong while loading the PDF. Try again.</ErrorMessage>}
 
         {!isError && (
-          <FileViewer
-            fileType="pdf"
-            filePath={pdfUrl}
-            onError={handleError}
-          />
+          <Document
+            file={pdfUrl} // استخدام 'file' بدلاً من 'filePath'
+            onLoadSuccess={onDocumentLoadSuccess}
+            onLoadError={handleError}
+            // رسالة تحميل تظهر أثناء جلب المستند
+            loading={<StatusMessage>Downloading and preparing document...</StatusMessage>}
+            
+          >
+            {/* عرض جميع الصفحات التي تم تحميلها */}
+            {Array.from(new Array(numPages), (el, index) => (
+              <Page
+                // إضافة 'key' فريد لكل صفحة (يحفظك من تحذير key)
+                key={`page_${index + 1}`}
+                pageNumber={index + 1}
+                // تعيين عرض ثابت هنا يضمن حجم ثابت داخل الحاوية 
+                width={800} 
+              />
+            ))}
+          </Document>
         )}
       </FileWrapper>
 
@@ -141,4 +170,4 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
   );
 };
 
-export default PDFViewer;
+export default PDFViewer1;

@@ -66,7 +66,7 @@ const StyledH2 = styled(motion.h2)`
  font-size: clamp(0.875rem, 2vw, 1.125rem);
 `;
 
-const StyledP = styled(motion.p)`
+const StyledP = styled(motion.div)`
  font-size: clamp(0.875rem, 2vw, 1.125rem);
   line-height: 1.8;
   color: #4a5568;

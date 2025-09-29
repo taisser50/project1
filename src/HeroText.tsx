@@ -36,7 +36,7 @@ function HeroText() {
       </motion.div>
 
       {/* الفقرة الأولى */}
-      <motion.p
+      <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: animationStart + 2, duration: 0.6 }}
@@ -52,10 +52,10 @@ function HeroText() {
         and{" "}
         <span className="text-purple-600 font-semibold">cloud services</span>{" "}
         ensures that your organization stays ahead in the digital landscape.
-      </motion.p>
+      </motion.div>
 
       {/* الفقرة الثانية */}
-      <motion.p
+      <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: animationStart + 2.3, duration: 0.6 }}
@@ -68,10 +68,10 @@ function HeroText() {
         in providing electronic systems and IT solutions, we have worked
         extensively in government and non-government projects in the Kurdistan
         Region.
-      </motion.p>
+      </motion.div>
 
       {/* الفقرة الثالثة */}
-      <motion.p
+      <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: animationStart + 2.6, duration: 0.6 }}
@@ -84,7 +84,7 @@ function HeroText() {
           university team
         </span>
         , ensuring reliability and excellence for you.
-      </motion.p>
+      </motion.div>
 
       {/* ISP Component */}
       <motion.div
