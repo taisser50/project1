@@ -1,6 +1,27 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaArrowUp } from "react-icons/fa"; // أيقونة سهم للأعلى
+
+// **تم حذف: import { FaArrowUp } from "react-icons/fa";**
+
+// تعريف الأيقونة كـ React Component بديل
+const UpArrowIcon = ({ size, iconColor }: { size: number, iconColor: string }) => (
+  // أيقونة سهم SVG قياسية
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke={iconColor}
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <line x1="12" y1="19" x2="12" y2="5"></line>
+    <polyline points="5 12 12 5 19 12"></polyline>
+  </svg>
+);
+
 
 interface BackToTopButtonProps {
   threshold?: number; // المسافة من الأعلى لإظهار الزر
@@ -29,6 +50,8 @@ export default function BackToTopButton({
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const iconSize = size * 0.5; // حجم الأيقونة هو نصف حجم الزر
+
   return (
     <AnimatePresence>
       {visible && (
@@ -48,7 +71,8 @@ export default function BackToTopButton({
           className="fixed bottom-6 right-6 rounded-full shadow-lg flex items-center justify-center z-50 hover:scale-110 transition-transform cursor-pointer"
           aria-label="Back to top"
         >
-          <FaArrowUp size={size * 0.5} />
+          {/* **الاستبدال هنا: استخدام مكون SVG مباشرة** */}
+          <UpArrowIcon size={iconSize} iconColor={iconColor} />
         </motion.button>
       )}
     </AnimatePresence>
