@@ -8,6 +8,7 @@ function SoftwareADT() {
   return (
     <PageContainer>
       <div className="text-center font-bold text-blue-500 text-size-50px">
+        
         <h1 className="text-4xl font-bold text-gray-800 text-[#014f86]">Transform Your Business with ADT software solutions</h1>
         <p className="mt-4 text-lg text-gray-600">Our software solutions are designed to meet your needs.</p>
       </div>

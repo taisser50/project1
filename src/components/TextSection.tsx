@@ -51,29 +51,30 @@ const StyledH1 = styled(motion.h1)`
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 10;
-   font-family: 'IBM Plex Sans', 'monospace'
+   font-family: 'IBM Plex Sans', 'sans-serif';
 `;
 
 const StyledH2 = styled(motion.h2)`
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
+
   font-weight: 600;
   color: #013a63;
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 10;
-   font-family:'IBM Plex Sans', 'sans-serif';
+  font-family: 'IBM Plex Sans', 'sans-serif';
 
+ font-size: clamp(0.875rem, 2vw, 1.125rem);
 `;
 
 const StyledP = styled(motion.p)`
-  font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+ font-size: clamp(0.875rem, 2vw, 1.125rem);
   line-height: 1.8;
   color: #4a5568;
   max-width: 90%; 
   margin: 0 auto;
   position: relative;
   z-index: 10;
-    font-family: 'Inter', 'sans-serif';
+    font-family: 'IBM Plex Sans', 'sans-serif';
 `;
 
 const textVariants = {

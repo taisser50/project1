@@ -91,14 +91,15 @@ function HeroText() {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: animationStart + 2.9, duration: 0.6 }}
-        className="w-full mt-4"
+        className="w-auto h-auto"
       >
-        <Isp />
+       <Isp />
       </motion.div>
 
      
    
    </motion.div>
+      
   );
 }
  export default HeroText;

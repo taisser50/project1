@@ -6,6 +6,7 @@ import Isp from "../Pages/isp";
 function Home() {
   return (
     <>
+    <div className="p-[20px]"/>
       <HeroText /> 
      
       <BoatVideo />   

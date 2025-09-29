@@ -5,18 +5,20 @@ import ProductCardProps from "../components/ProductCardProps";
 
 function Isp() {
     return(
-      <PageContainer>             
+      <PageContainer>   
+               
             <TextSection  title="Internet Service Provider" subtitle="Our company offers top-tier Internet Service Provider (ISP) solutions in partnership with a range of leading and trusted ISPs. By collaborating with multiple distinguished providers, we ensure that our clients receive:">
-      <ul className="font-healing text-bold">
-        <li className="text-30px">Reliable and high-speed internet connections tailored to their needs.</li>
-        <li className="text-30px">Seamless connectivity through advanced technologies including Fiber-to-the-Home (FTTH).</li>
-        <li className="text-30px">Flexible options from multiple providers, allowing for the best performance and coverage in every area.</li>
-        <li className="text-30px">Professional support and service to maintain consistent uptime and user satisfaction.</li>
+      <ul className="text-sm sm:text-base md:text-lg leading-relaxed mb-4">
+        <li className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 text-[#013a63]">Reliable and high-speed internet connections tailored to their needs.</li>
+        <li className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 text-[#013a63]">Seamless connectivity through advanced technologies including Fiber-to-the-Home (FTTH).</li>
+        <li className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 text-[#013a63]">Flexible options from multiple providers, allowing for the best performance and coverage in every area.</li>
+        <li className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 text-[#013a63]">Professional support and service to maintain consistent uptime and user satisfaction.</li>
       </ul>
-       <ProductCardProps imageSrc={"images/ispadt.png"} alt={""} title={"Internet Service Provider "} description={""}></ProductCardProps>
+        
+       <ProductCardProps imageSrc={"images/ispadt1.png"} alt={""} title={"Internet Service Provider "} description={""} className="h-auto w-auto"></ProductCardProps>
       </TextSection>       
 
-     <div className="p-[70px]"/>
+     <div className="p-[10px]"/>
          </PageContainer>   
 );
 }

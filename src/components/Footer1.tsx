@@ -116,28 +116,48 @@ const FooterBottom = styled.p`
 `;
 
 const Footer: React.FC = () => {
-  const [showFooter, setShowFooter] = useState(true);
+  // ✅ الحالة الأولية:
+  // - لو ديسكتوب والصفحة فوق (scrollY === 0) → لا يظهر
+  // - لو موبايل → يظهر مباشرة
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+  const [showFooter, setShowFooter] = useState(() => {
+    if (window.innerWidth >= 1024 && window.scrollY === 0) {
+      return false;
+    }
+    return true;
+  });
 
   useEffect(() => {
+    // ✅ تحديث isDesktop عند تغيير حجم الشاشة
     const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     let scrollListener: (() => void) | undefined;
 
     if (isDesktop) {
-      scrollListener = () => {
-        const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 50;
+      // ✅ ديسكتوب: الفوتر يظهر فقط عند الوصول لأسفل الصفحة
+      const checkIfAtBottom = () => {
+        const isAtBottom =
+          window.innerHeight + window.scrollY >=
+          document.body.offsetHeight - 50;
         setShowFooter(isAtBottom);
       };
-      window.addEventListener('scroll', scrollListener);
+
+      // استدعاء أول مرة (عشان يتأكد لو كنت أصلاً محمل تحت)
+      checkIfAtBottom();
+
+      // إضافة listener للسكرول
+      scrollListener = checkIfAtBottom;
+      window.addEventListener("scroll", scrollListener);
     } else {
-      setShowFooter(true); // Mobile: دائمًا ظاهر
+      // ✅ موبايل: الفوتر دائمًا ظاهر
+      setShowFooter(true);
     }
 
+    // ✅ تنظيف الأحداث
     return () => {
-      window.removeEventListener('resize', handleResize);
-      if (scrollListener) window.removeEventListener('scroll', scrollListener);
+      window.removeEventListener("resize", handleResize);
+      if (scrollListener) window.removeEventListener("scroll", scrollListener);
     };
   }, [isDesktop]);
 

@@ -133,20 +133,32 @@ const galleryImages = Array.from({ length: 25 }, (_, i) => ({
 function OurSolutions() {
   return (
     <PageContainer>  
-      <div className="text-center font-bold text-[#013a63] text-size-50px">
-       <TextSection title="ADT for creative solutions" subtitle="">
-       <p className="text-size-40px">  We offer a wide range of solutions to meet your needs</p>
-       </TextSection><div className="p-[30px]"/>
+        <TextSection  title="ADT for creative solutions" subtitle="">
+     
+      </TextSection>
+         <div
+  className="relative text-center font-bold text-[#013a63] 
+             bg-cover bg-center rounded-2xl overflow-hidden p-10 w-auto h-auto"
+  style={{ backgroundImage: "url('/images/csol.png')" }}
+/>
+      <div className="text-center font-bold text-[#013a63] text-size-50px ">
+  
+  <div className="relative z-10">
+ 
+  
+</div>
+
+     
          <div className="grid md:grid-cols-4 gap-10  p-[30px]" >     
-        <a href="#Advertising Design"> <GlassButton text="Go to Advertising Design Section" className="text-black"  size="lg" type="button"/></a>
-        <a href="#Emergency Power"> <GlassButton text="Go to Emergency Power Section" className="text-black"  size="lg" type="button"/></a>
-        <a href="#PARKING MANAGMENT"> <GlassButton text="Go to Parking Managment Section" className="text-black"  size="lg" type="button"/></a>
-        <a href="#IP PHONE"> <GlassButton text="Go to IP PHONE Section" className="text-black"  size="lg" type="button"/></a>
+        <a href="#Advertising Design"> <GlassButton text="Go to Advertising Design Section" className="text-black border-2 border-black"  size="lg" type="button"/></a>
+        <a href="#Emergency Power"> <GlassButton text="Go to Emergency Power Section" className="text-black border-2 border-black"  size="lg" type="button"/></a>
+        <a href="#PARKING MANAGMENT"> <GlassButton text="Go to Parking Managment Section" className="text-black border-2 border-black"  size="lg" type="button"/></a>
+        <a href="#IP PHONE"> <GlassButton text="Go to IP PHONE Section" className="text-black border-2 border-black"  size="lg" type="button"/></a>
          </div> 
          <div className="grid md:grid-cols-3 gap-10 justify-center"> 
-        <a href="#Website Design"> <GlassButton text="Go to Website Design Section" className="text-black"  size="lg" type="button"/></a>
-        <a href="#PDF"> <GlassButton text="Go to PDF section" className="text-black"  size="lg" type="button"/></a>
-        <a href="#Our works"> <GlassButton text="Go to Our works Section" className="text-black"  size="lg" type="button"/></a>
+        <a href="#Website Design"> <GlassButton text="Go to Website Design Section" className="text-black border-2 border-black"  size="lg" type="button"/></a>
+        <a href="#PDF"> <GlassButton text="Go to PDF section" className="text-black border-2 border-black"  size="lg" type="button"/></a>
+        <a href="#Our works"> <GlassButton text="Go to Our works Section" className="text-black border-2 border-black"  size="lg" type="button"/></a>
         </div>
    
       <div id="Advertising Design">
@@ -172,15 +184,15 @@ function OurSolutions() {
 
        <div className="p-[40px]"/>
        <div id="PARKING MANAGMENT">
-       <TextSection title="PARKING MANAGMENT" subtitle="We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">
+       <TextSection title="Parking Management" subtitle="We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">
                   <ProductCardProps imageSrc={"images/anpr.png"} alt={""} title={"ANPR"} description={"ADT has been serving the IT community for over a decade, helping businesses achieve their goals through technology. Our journey is marked by innovation and growth. parking management"}></ProductCardProps>
         </TextSection>  
        <div className="p-[40px]"/> 
-       <TextSection title="PARKING MANAGMENT" subtitle="We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">     
+       <TextSection title="Parking Management" subtitle="We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">     
           <ProductCardProps imageSrc={"images/gate.png"} alt={""} title={"Electric Door Gate"} description={"At ADT, our mission is to deliver innovative IT solutions that drive success for our clients. We are committed to providing exceptional service and cutting-edge technology to help businesses thrive."}></ProductCardProps>
        </TextSection>
        <div className="p-[40px]"/>
-       <TextSection title="PARKING MANAGMENT" subtitle="We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">     
+       <TextSection title="Parking Management" subtitle="We are a leading IT company providing advanced solutions to businesses worldwide. Our services include web development, mobile app development, cloud solutions, advertising design, etc. Let us help you take your business to the next level.">     
             <ProductCardProps imageSrc={"images/adtbarai/adtbarai1.png"} alt={""} title={"BARRIER"} description={"At ADT, our mission is to deliver innovative IT solutions that drive success for our clients. We are committed to providing exceptional service and cutting-edge technology to help businesses thrive., parking management"}></ProductCardProps>
        </TextSection>
        </div>

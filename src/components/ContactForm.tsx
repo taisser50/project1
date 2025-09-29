@@ -196,20 +196,16 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
-
-      {/* الخريطة */}
-      <div className="flex justify-center py-10">
-        <iframe
-          className="rounded-2xl shadow-lg"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d957.535308102839!2d44.02185882390179!3d36.172588304221854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x400723a5bcc66aa1%3A0xb56e418a6a659f7d!2sADT%20Company!5e0!3m2!1sen!2sus!4v1757427313849!5m2!1sen!2sus"
-          width={1000}
-          height={450}
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
+<div className="flex justify-center py-10 w-full">
+  <iframe
+    className="w-full max-w-4xl h-64 md:h-96 rounded-2xl shadow-lg"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d957.535308102839!2d44.02185882390179!3d36.172588304221854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x400723a5bcc66aa1%3A0xb56e418a6a659f7d!2sADT%20Company!5e0!3m2!1sen!2sus!4v1757427313849!5m2!1sen!2sus"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
     </div>
   );
 }

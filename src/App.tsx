@@ -14,6 +14,8 @@ import Login from "./Pages/Login";
 import HIK from "./Pages/HIK";
 
 import Footer1 from "./components/Footer1";
+import ScrollToTop from "./components/ScrollToTop";
+import BackToTopButton from "./components/BackToTopButton";
 
 
 
@@ -21,14 +23,19 @@ import Footer1 from "./components/Footer1";
 
 
 function App() {
+
+  
   return (
+    
     <>
+      
       <BrowserRouter>
+       <ScrollToTop smooth={true}/>
         <Navbar />
-        <div className="pt-[80px]">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Home" element={<Home />} />
+        <div className="pt-[0px]">
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/Fas" element={<Fas />} />
         <Route path="/Jop" element={<Jop />} />
         <Route path="/ContactUs" element={<ContactUs />} />
@@ -40,16 +47,24 @@ function App() {
         <Route path="/OurSolutions" element={<OurSolutions />} />
         <Route path="/login"  element={<Login />} />
         <Route path="/HIK"  element={<HIK />} />
-      
-
-
+        
       </Routes>
      </div>
      <div className="p-[40px]"></div>
      <Footer1/>
+      <BackToTopButton
+        threshold={200}        
+        size={60}              
+        bgColor="to-blue-600"      
+        iconColor="#000000ff"
+      />
     </BrowserRouter>      
     </>
   );
 }
 
 export default App;
+function useEffect(arg0: () => void, arg1: never[]) {
+  throw new Error("Function not implemented.");
+}
+

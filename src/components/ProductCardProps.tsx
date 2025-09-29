@@ -8,13 +8,14 @@ interface ProductCardProps {
   title: string;
   description: string;
    textArea?: string;
+   className?:string;
 
 }
 
 
 
 
-export default function ProductCard({ imageSrc, alt, title, description, textArea }: ProductCardProps) {
+export default function ProductCard({ imageSrc, alt, title, description, textArea  ,className}: ProductCardProps) {
   const [transform, setTransform] = useState({ rotateX: 0, rotateY: 0 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -50,7 +51,7 @@ export default function ProductCard({ imageSrc, alt, title, description, textAre
         <img
           src={imageSrc}
           alt={alt}
-          className="w-full h-full object-cover"
+          className={`w-full h-full object-cover ${className} `}
         />
         <motion.div
           className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center text-white p-4"

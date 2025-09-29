@@ -75,7 +75,7 @@ export default function Auth() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-6 bg-white rounded shadow-lg max-w-md mx-auto mt-20">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-6 bg-none rounded-2xl shadow-lg max-w-md mx-auto mt-20">
         <input
           type="text"
           placeholder="Username"

@@ -12,7 +12,7 @@ const AboutCo = () => {
         title="About Our Company"
         subtitle="Innovative IT Solutions"
       > 
-      <div className="flex items-center justify-center gap-2 flex-wrap"> <Compass /></div>
+      <div className="flex items-center justify-center gap-2 flex-wrap">     <img src="/images/abou.png" className="rounded-2xl "/></div>
          
         <p className="text-center text-[#013a63] mt-4 text-xl leading-relaxed px-4 md:px-24">
           At ADT Company, we specialize in delivering innovative IT solutions tailored to meet your business needs. Our expertise in software development and cloud services ensures that your organization stays ahead in the digital landscape.
