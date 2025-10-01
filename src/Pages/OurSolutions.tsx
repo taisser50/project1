@@ -5,6 +5,7 @@ import PDFViewer1 from "../components/PDFViewer1";
 import TextSection from "../components/TextSection";
 import ProductCardProps from "../components/ProductCardProps";
 import GlassButton from "../components/GlassButton";
+import { VideoText } from "../components/video-text";
 
 
 const items = [
@@ -141,6 +142,21 @@ function OurSolutions() {
              bg-cover bg-center rounded-2xl overflow-hidden p-10 w-auto h-auto"
   style={{ backgroundImage: "url('/images/csol.png')" }}
 />
+ <VideoText
+       src="adt1.mp4"
+       fontSize={10} 
+       fontWeight={800}
+       fontFamily="Arial Black, sans-serif"
+       className="w-full h-[50vh]" 
+       autoPlay
+       muted
+       loop
+       initial={{ opacity: 0, scale: 0.8 }}
+       animate={{ opacity: 1, scale: 1 }}
+       transition={{ duration: 1.5, ease: "easeOut" }}
+     >
+      creative solutions
+     </VideoText>
       <div className="text-center font-bold text-[#013a63] text-size-50px ">
   
   <div className="relative z-10">

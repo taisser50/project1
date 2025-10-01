@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { AuthContext } from "./Context/AuthContext";
 import Logo from "./Logo";
 import { Menu, X } from "lucide-react";
+import DarkModeToggle from "./components/DarkModeToggle";
 
 // Variants للحركة
 const navVariants = {
@@ -117,7 +118,7 @@ useEffect(() => {
         <motion.div variants={itemVariants}>
           <Logo />
         </motion.div>
-
+        
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6">
           {links.map((link) => (
@@ -150,7 +151,7 @@ useEffect(() => {
             </div>
           </motion.div>
         </div>
-
+<DarkModeToggle />
         {/* Sign In / User */}
         <motion.div variants={itemVariants} className="hidden md:block">
           {!user ? (

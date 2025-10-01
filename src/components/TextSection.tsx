@@ -47,7 +47,7 @@ const HeaderContainer = styled(motion.div)`
 const StyledH1 = styled(motion.h1)`
   font-size: clamp(2rem, 5vw, 3.5rem); 
   font-weight: 700;
-  color: #000;
+  color: #013a63;
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 10;
@@ -57,7 +57,7 @@ const StyledH1 = styled(motion.h1)`
 const StyledH2 = styled(motion.h2)`
 
   font-weight: 600;
-  color: #013a63;
+  color: #0366acff;
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 10;

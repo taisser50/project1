@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import PageContainer from "../components/PageContainer";
 import { motion, AnimatePresence } from "framer-motion";
 import GlassButton from "../components/GlassButton";
@@ -7,6 +7,8 @@ import ProductCard from "../components/ProductCardProps";
 import { MarqueeImage, ThreeDMarquee } from "../components/ThreeDImageRing";
 import ExpandableText from "../components/ExpandableText";
 import ExpandableSection from "../components/ExpandableText";
+import { ThemeContext } from "../components/context/ThemeContext";
+import { VideoText } from "../components/video-text";
 
 
 
@@ -395,7 +397,7 @@ Choice of up to   tone modes.
 
 Adopting independent base, it is simple and convenient for installation, commissioning and maintenance.
 
-The light display adopts multiple ultra-high brightness light-emitting diodes as the light source, with eye-catching display,long life and low power consumption.
+The light display adopts multiple ultra-high brightness light-emitting diodes as the light source, with eye-catching display,long life and low power consumption.
 
 Tamper-evident function is possible.
 C9092T Conventional Sounder Beacon is a product that is used in conjunction with the Conventional fire alarm controller produced by our Company.The Sounder Beacon may be used to give audible alarms at the scenes of accidents. It is applicable to places like high-rise residential buildings, public places, hotels, amusement buildings, factories, shopping centers, hospitals, schools, office buildings and stock exchanges, and particularly to the places with a low visibility or the possibility of generation of smoke.
@@ -410,17 +412,32 @@ C9092T Conventional Sounder Beacon is a product that is used in conjunction with
 
 function Fas() {
   const [showInfo, setShowInfo] = useState(false);
-
+ 
   function handleCustomAction(image: MarqueeImage, index: number) {
     throw new Error("Function not implemented.");
   }
 
   return (
-    <PageContainer>
-    
+    <PageContainer >
+ 
       <div className="pt-[10px]"></div>
+      <VideoText
+  src="adt1.mp4"
+  fontSize={16} 
+  fontWeight={800}
+  fontFamily="Arial Black, sans-serif"
+  className="w-full h-[50vh]" 
+  autoPlay
+  muted
+  loop
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1.5, ease: "easeOut" }}
+>
+  SANJIANG
+</VideoText>
        <img src="/logosnaj.png"/>
-      <h5 className="text-center font-bold text-blue-500 text-size-50px">SANJIANG</h5>
+      <h5 className="text-center font-bold dark:bg-gray-800 text-black dark:text-white text-size-50px"></h5>
        <h2 className="text-xl font-bold mb-2 text-size-50px text-center">Fire Alarm System</h2>
        <div className="pt-[20px]"></div>
        <div  className="text-center text-3xl text-[#013a63] font-semibold px-4 md:px-24 leading-relaxed"> 
@@ -446,7 +463,7 @@ function Fas() {
       ))}
 
       <div className="pt-[40px]"></div>
-    <div className="space-y-6">
+    <div className="space-y-6 ">
   {sections.map((item, index) => (
     <ExpandableSection
       key={index}

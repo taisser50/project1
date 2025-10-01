@@ -16,6 +16,9 @@ import HIK from "./Pages/HIK";
 import Footer1 from "./components/Footer1";
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTopButton from "./components/BackToTopButton";
+import DarkModeToggle from "./components/DarkModeToggle";
+import { ThemeContext } from "./components/context/ThemeContext";
+import { useContext } from "react";
 
 
 
@@ -23,16 +26,18 @@ import BackToTopButton from "./components/BackToTopButton";
 
 
 function App() {
-
+  const { darkMode } = useContext(ThemeContext);
   
   return (
     
     <>
       
       <BrowserRouter>
+      <div className={darkMode ? "dark" : ""}>
        <ScrollToTop smooth={true}/>
         <Navbar />
         <div className="pt-[0px]">
+          
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
@@ -47,17 +52,20 @@ function App() {
         <Route path="/OurSolutions" element={<OurSolutions />} />
         <Route path="/login"  element={<Login />} />
         <Route path="/HIK"  element={<HIK />} />
-        
+          
       </Routes>
+     
      </div>
+     
      <div className="p-[40px]"></div>
      <Footer1/>
+      
       <BackToTopButton
         threshold={200}        
         size={60}              
         bgColor="to-blue-600"      
         iconColor="#000000ff"
-      />
+      /></div>
     </BrowserRouter>      
     </>
   );

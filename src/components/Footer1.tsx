@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
+import DarkModeToggle from './DarkModeToggle';
 
 // Variants للتحريك
 const footerVariants = {
@@ -177,6 +178,7 @@ const Footer: React.FC = () => {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/AboutCo">About</Link></li>
                 <li><Link to="/OurSolutions">Solutions</Link></li>
+                
               </ul>
             </FooterSection>
 

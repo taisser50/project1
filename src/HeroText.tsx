@@ -2,9 +2,13 @@ import { motion } from "framer-motion";
 import Compass from "./Compass";
 import { animationStart, reveal } from "./utils/animation";
 import Isp from "./Pages/isp";
+import { VideoText } from "./components/video-text";
 
 function HeroText() {
    return (
+
+
+    
     <motion.div
       layout
       initial={{ height: 0 }}
@@ -94,9 +98,10 @@ function HeroText() {
         className="w-auto h-auto"
       >
        <Isp />
+       
       </motion.div>
 
-     
+         
    
    </motion.div>
       

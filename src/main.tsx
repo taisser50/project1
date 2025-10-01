@@ -7,12 +7,15 @@ import { AuthProvider } from './Context/AuthContext'
 
 import '/node_modules/react-pdf/dist/Page/AnnotationLayer.css'; 
 import 'react-pdf/dist/Page/TextLayer.css'; 
+import { ThemeProvider } from './components/context/ThemeContext'
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <AuthProvider>
+        <ThemeProvider>
     <App />
+       </ThemeProvider>
     </AuthProvider>
   </React.StrictMode>,
 )
